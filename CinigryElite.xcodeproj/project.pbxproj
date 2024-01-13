@@ -8,17 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		1807E9942B52655C00F06827 /* CinigryEliteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807E9932B52655C00F06827 /* CinigryEliteApp.swift */; };
-		1807E9962B52655C00F06827 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807E9952B52655C00F06827 /* ContentView.swift */; };
 		1807E9982B52655D00F06827 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1807E9972B52655D00F06827 /* Assets.xcassets */; };
 		1807E99B2B52655D00F06827 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1807E99A2B52655D00F06827 /* Preview Assets.xcassets */; };
+		1807E9A22B526A2D00F06827 /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807E9A12B526A2D00F06827 /* LandingPage.swift */; };
+		1807E9A52B526F5500F06827 /* LandingTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807E9A42B526F5500F06827 /* LandingTitle.swift */; };
+		1807E9A72B52708900F06827 /* LandingPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807E9A62B52708900F06827 /* LandingPoints.swift */; };
+		1807E9AC2B5270CC00F06827 /* LandingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807E9AB2B5270CC00F06827 /* LandingModel.swift */; };
+		1807E9AE2B52724B00F06827 /* LandingPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807E9AD2B52724B00F06827 /* LandingPoint.swift */; };
+		1807E9B12B5278F900F06827 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807E9B02B5278F900F06827 /* UIColor+Extension.swift */; };
+		1807E9B42B527D7C00F06827 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807E9B32B527D7C00F06827 /* PrimaryButton.swift */; };
+		1807E9B62B5280D200F06827 /* LandingButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807E9B52B5280D200F06827 /* LandingButtons.swift */; };
+		1807E9B82B5284D200F06827 /* AppGlobalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807E9B72B5284D200F06827 /* AppGlobalModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1807E9902B52655C00F06827 /* CinigryElite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CinigryElite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1807E9932B52655C00F06827 /* CinigryEliteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinigryEliteApp.swift; sourceTree = "<group>"; };
-		1807E9952B52655C00F06827 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1807E9972B52655D00F06827 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1807E99A2B52655D00F06827 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1807E9A12B526A2D00F06827 /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
+		1807E9A42B526F5500F06827 /* LandingTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingTitle.swift; sourceTree = "<group>"; };
+		1807E9A62B52708900F06827 /* LandingPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPoints.swift; sourceTree = "<group>"; };
+		1807E9AB2B5270CC00F06827 /* LandingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingModel.swift; sourceTree = "<group>"; };
+		1807E9AD2B52724B00F06827 /* LandingPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPoint.swift; sourceTree = "<group>"; };
+		1807E9B02B5278F900F06827 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		1807E9B32B527D7C00F06827 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		1807E9B52B5280D200F06827 /* LandingButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingButtons.swift; sourceTree = "<group>"; };
+		1807E9B72B5284D200F06827 /* AppGlobalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGlobalModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +68,10 @@
 			isa = PBXGroup;
 			children = (
 				1807E9932B52655C00F06827 /* CinigryEliteApp.swift */,
-				1807E9952B52655C00F06827 /* ContentView.swift */,
+				1807E9B22B527D6A00F06827 /* Styles */,
+				1807E9AF2B5278CC00F06827 /* Extensions */,
+				1807E9AA2B5270BF00F06827 /* Models */,
+				1807E9A32B526F3F00F06827 /* LandingPage */,
 				1807E9972B52655D00F06827 /* Assets.xcassets */,
 				1807E9992B52655D00F06827 /* Preview Content */,
 			);
@@ -65,6 +84,43 @@
 				1807E99A2B52655D00F06827 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1807E9A32B526F3F00F06827 /* LandingPage */ = {
+			isa = PBXGroup;
+			children = (
+				1807E9A12B526A2D00F06827 /* LandingPage.swift */,
+				1807E9A42B526F5500F06827 /* LandingTitle.swift */,
+				1807E9AD2B52724B00F06827 /* LandingPoint.swift */,
+				1807E9A62B52708900F06827 /* LandingPoints.swift */,
+				1807E9B52B5280D200F06827 /* LandingButtons.swift */,
+			);
+			path = LandingPage;
+			sourceTree = "<group>";
+		};
+		1807E9AA2B5270BF00F06827 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1807E9B72B5284D200F06827 /* AppGlobalModel.swift */,
+				1807E9AB2B5270CC00F06827 /* LandingModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1807E9AF2B5278CC00F06827 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1807E9B02B5278F900F06827 /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1807E9B22B527D6A00F06827 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				1807E9B32B527D7C00F06827 /* PrimaryButton.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +193,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1807E9962B52655C00F06827 /* ContentView.swift in Sources */,
+				1807E9B12B5278F900F06827 /* UIColor+Extension.swift in Sources */,
+				1807E9A72B52708900F06827 /* LandingPoints.swift in Sources */,
 				1807E9942B52655C00F06827 /* CinigryEliteApp.swift in Sources */,
+				1807E9A52B526F5500F06827 /* LandingTitle.swift in Sources */,
+				1807E9A22B526A2D00F06827 /* LandingPage.swift in Sources */,
+				1807E9AE2B52724B00F06827 /* LandingPoint.swift in Sources */,
+				1807E9B82B5284D200F06827 /* AppGlobalModel.swift in Sources */,
+				1807E9B62B5280D200F06827 /* LandingButtons.swift in Sources */,
+				1807E9B42B527D7C00F06827 /* PrimaryButton.swift in Sources */,
+				1807E9AC2B5270CC00F06827 /* LandingModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

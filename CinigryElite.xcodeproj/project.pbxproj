@@ -114,7 +114,7 @@
 				1807E9A32B526F3F00F06827 /* LandingPage */,
 				1807E9BB2B528AE800F06827 /* SignIn */,
 				1807E9BC2B528AFF00F06827 /* SignUp */,
-				1807E9BD2B528B0500F06827 /* ContinueAsGuest */,
+				1807E9BD2B528B0500F06827 /* Movieslanding */,
 				1807E9972B52655D00F06827 /* Assets.xcassets */,
 				1807E9992B52655D00F06827 /* Preview Content */,
 			);
@@ -184,7 +184,7 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
-		1807E9BD2B528B0500F06827 /* ContinueAsGuest */ = {
+		1807E9BD2B528B0500F06827 /* Movieslanding */ = {
 			isa = PBXGroup;
 			children = (
 				1807E9CC2B52D5CC00F06827 /* MoviesViewModel.swift */,
@@ -193,7 +193,7 @@
 				1807E9C82B52983E00F06827 /* MoviesGrid.swift */,
 				1807E9CE2B52D76A00F06827 /* MovieGridCell.swift */,
 			);
-			path = ContinueAsGuest;
+			path = Movieslanding;
 			sourceTree = "<group>";
 		};
 		1807E9D02B52DEC200F06827 /* Utilities */ = {

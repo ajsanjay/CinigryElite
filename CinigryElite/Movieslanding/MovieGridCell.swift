@@ -21,7 +21,7 @@ struct MovieGridCell: View {
                 .frame(maxWidth: GlobalModel.halfWidth - 30, alignment: .leading)
                 .font(.title3)
                 .fontWeight(.medium)
-            Spacer(minLength: 20)
+            Spacer(minLength: 30)
         }
     }
 }

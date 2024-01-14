@@ -35,4 +35,15 @@ struct MoviesApi {
         
     }
     
+    func MoviesAPI(param: [String: Any], completion: @escaping (MoviesListModel?, ServiceError?) -> ()) {
+        let request = MoviesRequest().GetMoviesList(from: RequestData(requestParamType: .query, param: param))
+        APILoader.shared.loadAPIRequest(isUserId: true, requestData: request) { (model: MoviesListModel?, error) in
+            if let _ = error {
+                completion(nil, error)
+            } else {
+                completion(model, nil)
+            }
+        }
+    }
+    
 }

@@ -9,11 +9,13 @@ import SwiftUI
 
 final class MoviesViewModel: ObservableObject {
     
+    @Published var isLoading = true
+    @Published var isShowingDetail = false
+    @Published var movies: [MovieContent] = []
+    
     var selectedObject: MovieContent? {
         didSet { isShowingDetail = true }
     }
     
     let columns: [GridItem] = [GridItem(.flexible()),GridItem(.flexible())]
-    
-    @Published var isShowingDetail = false
 }

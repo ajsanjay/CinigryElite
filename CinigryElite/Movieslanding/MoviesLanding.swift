@@ -9,14 +9,31 @@ import SwiftUI
 
 struct MoviesLanding: View {
     
+    @StateObject var viewModel = LandingViewModel()
     @Binding var isShowingDetail: Bool
     
     var body: some View {
         VStack (spacing: -40) {
-            MoviesHeading(isShowingDetail: $isShowingDetail)
-            MoviesGrid(moviesList: MockMovieList.movies)
+            if viewModel.isLoading {
+                ProgressView()
+                    .progressViewStyle(.circular)
+                Text("Loading...")
+                Text(" ")
+                Button {
+                    self.isShowingDetail = false
+                } label: {
+                    Text("Back")
+                }
+            } else {
+                MoviesHeading(isShowingDetail: $isShowingDetail)
+                MoviesGrid(moviesList: viewModel.movies)
+            }
         }
         .padding(.top, -40)
+        .onAppear {
+            viewModel.getGuestInfo()
+            isShowingDetail = viewModel.isShowingDetail
+        }
     }
 }
 

@@ -34,7 +34,7 @@ struct MoviesGrid: View {
             }
             .padding(.top, -20)
             .sheet(isPresented: $viewModel.isShowingDetail, content: {
-//                frameWorkDetailView(viewModel: FrameWorkDetailVM(frameWork: viewModel.selectedObject ?? MockData.sampleFramework, isShowingDetail: $viewModel.isShowingDetail))
+                MovieInfo(isShowingDetail: $viewModel.isShowingDetail)
             })
         }
     }

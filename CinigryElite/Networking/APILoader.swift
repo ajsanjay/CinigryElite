@@ -14,11 +14,16 @@ struct APILoader: ResponseHandler {
         self.urlSession = urlSession
     }
     
-    func loadAPIRequest<C:Codable>(requestData: URLRequest?, completionHandler: @escaping (C?, ServiceError?) -> ()) {
+    func loadAPIRequest<C:Codable>(isUserId: Bool, requestData: URLRequest?, completionHandler: @escaping (C?, ServiceError?) -> ()) {
         if var urlRequest = requestData {
-            //Set Auth token
             if let auth_token = UserDefaults.standard.string(forKey: UserDefaultKeys.authToken.rawValue) {
-               urlRequest.setValue("Bearer \(auth_token)", forHTTPHeaderField: "Authorization")
+                urlRequest.setValue("Bearer \(auth_token)", forHTTPHeaderField: "Authorization")
+                urlRequest.setValue(GlobalModel.acessToken, forHTTPHeaderField: "accesstoken")
+                if isUserId {
+                    if let userId = UserDefaults.standard.string(forKey: UserDefaultKeys.userId.rawValue) {
+                        urlRequest.setValue(userId, forHTTPHeaderField: "userid")
+                    }
+                }
             }
             urlSession.dataTask(with: urlRequest) { (data, response, error) in
                 if let httpResponse = response as? HTTPURLResponse {
@@ -52,7 +57,7 @@ struct APILoader: ResponseHandler {
                                 }
                             }
                         }
-                        if let _ = serviceError.statusFailedError?.error?.message?.token , serviceError.httpStatus == 1000 {
+                        if let _ = serviceError.statusFailedError?.error , serviceError.httpStatus == 1000 {
 //                            postNotification("tokenExpire", [:])
                         } else {
                             completionHandler(nil, serviceError)

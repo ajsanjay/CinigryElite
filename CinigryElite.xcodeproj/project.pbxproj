@@ -38,6 +38,12 @@
 		1807E9E12B52E2CA00F06827 /* APILoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807E9E02B52E2CA00F06827 /* APILoader.swift */; };
 		1807E9E42B53899500F06827 /* MoviesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807E9E32B53899500F06827 /* MoviesRequest.swift */; };
 		1807E9E62B538A0600F06827 /* MoviesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807E9E52B538A0600F06827 /* MoviesApi.swift */; };
+		1807E9E92B53981000F06827 /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807E9E82B53981000F06827 /* MovieInfo.swift */; };
+		1807E9EC2B53D0E800F06827 /* GustLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807E9EB2B53D0E800F06827 /* GustLoginRequest.swift */; };
+		1807E9EE2B53D14C00F06827 /* GuestLoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807E9ED2B53D14C00F06827 /* GuestLoginAPI.swift */; };
+		1807E9F12B53D25E00F06827 /* GuestUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807E9F02B53D25E00F06827 /* GuestUserModel.swift */; };
+		1807E9F32B53D4BF00F06827 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807E9F22B53D4BF00F06827 /* Alerts.swift */; };
+		1807E9F52B5400E200F06827 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807E9F42B5400E200F06827 /* LoginModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +79,12 @@
 		1807E9E02B52E2CA00F06827 /* APILoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APILoader.swift; sourceTree = "<group>"; };
 		1807E9E32B53899500F06827 /* MoviesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRequest.swift; sourceTree = "<group>"; };
 		1807E9E52B538A0600F06827 /* MoviesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesApi.swift; sourceTree = "<group>"; };
+		1807E9E82B53981000F06827 /* MovieInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfo.swift; sourceTree = "<group>"; };
+		1807E9EB2B53D0E800F06827 /* GustLoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GustLoginRequest.swift; sourceTree = "<group>"; };
+		1807E9ED2B53D14C00F06827 /* GuestLoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestLoginAPI.swift; sourceTree = "<group>"; };
+		1807E9F02B53D25E00F06827 /* GuestUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestUserModel.swift; sourceTree = "<group>"; };
+		1807E9F22B53D4BF00F06827 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		1807E9F42B5400E200F06827 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +159,7 @@
 			children = (
 				1807E9B72B5284D200F06827 /* AppGlobalModel.swift */,
 				1807E9AB2B5270CC00F06827 /* LandingModel.swift */,
+				1807E9EF2B53D24C00F06827 /* GuestUser */,
 				1807E9CA2B52D10700F06827 /* MoviesListModel.swift */,
 			);
 			path = Models;
@@ -192,6 +205,7 @@
 				1807E9C62B52906F00F06827 /* MoviesHeading.swift */,
 				1807E9C82B52983E00F06827 /* MoviesGrid.swift */,
 				1807E9CE2B52D76A00F06827 /* MovieGridCell.swift */,
+				1807E9E72B5397D600F06827 /* MovieInfo */,
 			);
 			path = Movieslanding;
 			sourceTree = "<group>";
@@ -200,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				1807E9D12B52DEEA00F06827 /* CinigryRemoteImage.swift */,
+				1807E9F22B53D4BF00F06827 /* Alerts.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -207,6 +222,7 @@
 		1807E9D32B52DFA000F06827 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				1807E9EA2B53D0CD00F06827 /* GuestLogin */,
 				1807E9E22B53896200F06827 /* Movies */,
 				1807E9D42B52DFD900F06827 /* APIEnvironment.swift */,
 				1807E9D62B52E06900F06827 /* APIPath.swift */,
@@ -226,6 +242,32 @@
 				1807E9E52B538A0600F06827 /* MoviesApi.swift */,
 			);
 			path = Movies;
+			sourceTree = "<group>";
+		};
+		1807E9E72B5397D600F06827 /* MovieInfo */ = {
+			isa = PBXGroup;
+			children = (
+				1807E9E82B53981000F06827 /* MovieInfo.swift */,
+			);
+			path = MovieInfo;
+			sourceTree = "<group>";
+		};
+		1807E9EA2B53D0CD00F06827 /* GuestLogin */ = {
+			isa = PBXGroup;
+			children = (
+				1807E9EB2B53D0E800F06827 /* GustLoginRequest.swift */,
+				1807E9ED2B53D14C00F06827 /* GuestLoginAPI.swift */,
+			);
+			path = GuestLogin;
+			sourceTree = "<group>";
+		};
+		1807E9EF2B53D24C00F06827 /* GuestUser */ = {
+			isa = PBXGroup;
+			children = (
+				1807E9F02B53D25E00F06827 /* GuestUserModel.swift */,
+				1807E9F42B5400E200F06827 /* LoginModel.swift */,
+			);
+			path = GuestUser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,16 +346,22 @@
 				1807E9DB2B52E16A00F06827 /* MultipartFormDataRequest.swift in Sources */,
 				1807E9D52B52DFD900F06827 /* APIEnvironment.swift in Sources */,
 				1807E9C32B528D1100F06827 /* SignUpPage.swift in Sources */,
+				1807E9F12B53D25E00F06827 /* GuestUserModel.swift in Sources */,
 				1807E9D22B52DEEA00F06827 /* CinigryRemoteImage.swift in Sources */,
 				1807E9CB2B52D10700F06827 /* MoviesListModel.swift in Sources */,
 				1807E9B12B5278F900F06827 /* UIColor+Extension.swift in Sources */,
+				1807E9F32B53D4BF00F06827 /* Alerts.swift in Sources */,
+				1807E9EE2B53D14C00F06827 /* GuestLoginAPI.swift in Sources */,
 				1807E9A72B52708900F06827 /* LandingPoints.swift in Sources */,
 				1807E9942B52655C00F06827 /* CinigryEliteApp.swift in Sources */,
 				1807E9D72B52E06900F06827 /* APIPath.swift in Sources */,
+				1807E9F52B5400E200F06827 /* LoginModel.swift in Sources */,
 				1807E9DF2B52E21A00F06827 /* ResponseHandler+Extension.swift in Sources */,
+				1807E9EC2B53D0E800F06827 /* GustLoginRequest.swift in Sources */,
 				1807E9DD2B52E1A400F06827 /* RequestHandler+Extension.swift in Sources */,
 				1807E9A52B526F5500F06827 /* LandingTitle.swift in Sources */,
 				1807E9A22B526A2D00F06827 /* LandingPage.swift in Sources */,
+				1807E9E92B53981000F06827 /* MovieInfo.swift in Sources */,
 				1807E9AE2B52724B00F06827 /* LandingPoint.swift in Sources */,
 				1807E9C92B52983E00F06827 /* MoviesGrid.swift in Sources */,
 				1807E9E62B538A0600F06827 /* MoviesApi.swift in Sources */,

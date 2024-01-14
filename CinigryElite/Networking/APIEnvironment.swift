@@ -17,7 +17,7 @@ enum APIEnvironment {
     }
 
     func domain() -> String {
-        return self == .development ? "cinergyapp.thetunagroup.com/api/" : "cinergyapp.thetunagroup.com/api/"
+        return self == .development ? "cinergyapp.thetunagroup.com/api" : "cinergyapp.thetunagroup.com/api"
     }
     
 }

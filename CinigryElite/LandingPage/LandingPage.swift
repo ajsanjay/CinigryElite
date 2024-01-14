@@ -35,7 +35,7 @@ struct LandingPage: View {
                         .padding(.top, 40)
                 }
             }
-            .fullScreenCover(isPresented: $viewModel.isShowingDetail, content: {
+            .fullScreenCover(isPresented: ($viewModel.isShowingDetail), content: {
                 switch viewModel.selectedButton {
                 case .signIn:
                     SignInPage()
@@ -45,6 +45,9 @@ struct LandingPage: View {
                     MoviesLanding(isShowingDetail: $viewModel.isShowingDetail)
                 }
             })
+        }
+        .alert(item: $viewModel.alertItem) { alertItem in
+            Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
         }
     }
 }

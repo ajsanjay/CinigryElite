@@ -15,6 +15,7 @@ struct GlobalModel {
     static let halfScreenHeight = UIScreen.main.bounds.height * 0.5
     static let threeQuaterHeight = UIScreen.main.bounds.height * 0.75
     static let uuid = UIDevice.current.identifierForVendor!.uuidString + "CI -"
+    static let acessToken = "402620C92552D9303C58B901B43B0A41718E772C19520DD9A9AA52CE5A8FCB99"
 }
 
 struct Constants {
@@ -27,22 +28,12 @@ struct Constants {
 
 enum UserDefaultKeys: String {
     case authToken
+    case userId
 }
 
 struct StatusFail: Codable {
     let status: String?
-    let error: FailError?
-}
-
-struct FailError: Codable {
-    let message: FailErrorMessage?
-}
-
-struct FailErrorMessage: Codable {
-    let email: String?
-    let username: String?
-    let token: String?
-    let message: String?
+    let error: String?
 }
 
 func convertToDictionary(from text: String) throws -> [String: String] {

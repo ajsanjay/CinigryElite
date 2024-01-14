@@ -8,31 +8,38 @@
 import SwiftUI
 
 struct LandingButtons: View {
+    
+    @Binding var selectedButton: landingButtons
+    @Binding var isShowingDetail: Bool
+    
     var body: some View {
         VStack(spacing: 30) {
             Button {
-                print("Selected Sign In")
+//                isShowingDetail = true
+//                selectedButton = .signIn
             } label: {
-                PrimaryButton(title: "Sign In Now!", width: GlobalModel.quatrScreen, heigt: 60)
+                PrimaryButton(title: "Sign In Now!", width: GlobalModel.threeQuaterWidth, heigt: 60)
             }
             Text("Don't have an account?")
                 .foregroundColor(.lightGry)
                 .fontWeight(.medium)
                 .padding(.bottom, -30)
             Button {
-                print("Selected Sign Up")
+//                isShowingDetail = true
+//                selectedButton = .signUp
             } label: {
-                PrimaryButton(title: "Sign Up", width: GlobalModel.quatrScreen, heigt: 60)
+                PrimaryButton(title: "Sign Up", width: GlobalModel.threeQuaterWidth, heigt: 60)
             }
             Button {
-                print("Selected Sign Up")
+                isShowingDetail = true
+                selectedButton = .ContinueAsGuest
             } label: {
-                PrimaryButton(title: "Continue As Guest", width: GlobalModel.quatrScreen, heigt: 60)
+                PrimaryButton(title: "Continue As Guest", width: GlobalModel.threeQuaterWidth, heigt: 60)
             }
         }
     }
 }
 
 #Preview {
-    LandingButtons()
+    LandingButtons(selectedButton: .constant(.signIn), isShowingDetail: .constant(false))
 }

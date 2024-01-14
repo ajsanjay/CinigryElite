@@ -26,5 +26,5 @@ struct PrimaryButton: View {
 }
 
 #Preview {
-    PrimaryButton(title: "Select Here", width: 140, heigt: 60)
+    PrimaryButton(title: "Select Here", width: GlobalModel.threeQuaterWidth, heigt: 60)
 }

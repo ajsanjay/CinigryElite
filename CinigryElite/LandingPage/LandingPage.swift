@@ -8,27 +8,43 @@
 import SwiftUI
 
 struct LandingPage: View {
+    
+    @StateObject var viewModel = LandingViewModel()
+    
     var body: some View {
-        ZStack {
-            ScrollView {
-                VStack (alignment: .center, spacing: 25) {
-                    HStack {
-                        Spacer()
-                        Image(uiImage: UIImage(named: "CinigryIcon")!)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 250, height: 130, alignment: .center)
-                            .cornerRadius(0)
+        NavigationView {
+            ZStack {
+                ScrollView {
+                    VStack (alignment: .leading, spacing: 25) {
+                        HStack {
+                            Spacer()
+                            Image(uiImage: UIImage(named: "CinigryIcon")!)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 250, height: 130, alignment: .center)
+                                .cornerRadius(0)
+                                .padding()
+                            Spacer()
+                        }
+                        LandingTitle()
+                        LandingPoints()
                             .padding()
-                        Spacer()
                     }
-                    LandingTitle()
-                    LandingPoints()
-                        .padding()
-                    LandingButtons()
-                        .padding()
+                    Spacer()
+                    LandingButtons(selectedButton: $viewModel.selectedButton, isShowingDetail: $viewModel.isShowingDetail)
+                        .padding(.top, 40)
                 }
             }
+            .fullScreenCover(isPresented: $viewModel.isShowingDetail, content: {
+                switch viewModel.selectedButton {
+                case .signIn:
+                    SignInPage()
+                case .signUp:
+                    SignUpPage()
+                case .ContinueAsGuest:
+                    MoviesLanding(isShowingDetail: $viewModel.isShowingDetail)
+                }
+            })
         }
     }
 }

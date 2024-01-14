@@ -10,9 +10,11 @@ import SwiftUI
 struct GlobalModel {
     static let screenWidth = UIScreen.main.bounds.width
     static let halfWidth = UIScreen.main.bounds.width * 0.5
+    static let quaterWidth = UIScreen.main.bounds.width * 0.25
     static let threeQuaterWidth = UIScreen.main.bounds.width * 0.75
     static let screenHeight = UIScreen.main.bounds.height
     static let halfScreenHeight = UIScreen.main.bounds.height * 0.5
+    static let quaterHeight = UIScreen.main.bounds.height * 0.25
     static let threeQuaterHeight = UIScreen.main.bounds.height * 0.75
     static let uuid = UIDevice.current.identifierForVendor!.uuidString + "CI -"
     static let acessToken = "402620C92552D9303C58B901B43B0A41718E772C19520DD9A9AA52CE5A8FCB99"

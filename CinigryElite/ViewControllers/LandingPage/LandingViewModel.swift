@@ -18,6 +18,7 @@ import SwiftUI
     @Published var isLoading: Bool = true
     @Published var movies: [MovieContent] = []
     @Published var memberId = ""
+    @Published var erTicket = ""
     
     func getGuestInfo() {
         let qureyParam: [String: Any] = ["secret_key": GlobalModel.acessToken, "device_id": GlobalModel.uuid, "device_type": 2, "push_token": ""]
@@ -83,6 +84,7 @@ import SwiftUI
             guard let movieResp = moviesResp else { return }
             DispatchQueue.main.async {
                 if movieResp.response == "success" {
+                    weakSelf.erTicket = movieResp.er_tickets ?? "Up to 8 members"
                     weakSelf.movies = movieResp.escape_rooms_movies
                     weakSelf.isShowingDetail = true
                     weakSelf.isLoading = false

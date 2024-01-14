@@ -11,7 +11,9 @@ struct MovieInfo: View {
     
     @StateObject var viewModel = MovieInfoViewModel()
     @Binding var isPresented: Bool
+    @State var isMovieDetail: Bool = false
     let data: MovieContent
+    var erTicket: String
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -56,7 +58,7 @@ struct MovieInfo: View {
                                     Image(systemName: "person.fill")
                                         .foregroundColor(.lightColor)
                                         .frame(alignment: .leading)
-                                    Text("Up to 8 members")
+                                    Text(erTicket)
                                         .fontWeight(.medium)
                                         .foregroundColor(.primaryGrey)
                                         .frame(alignment: .leading)
@@ -73,6 +75,7 @@ struct MovieInfo: View {
                     }
                     HStack {
                         Button {
+                            self.isMovieDetail = true
                             print("Booking button")
                         } label: {
                             PrimaryButton(title: "Book Now", width: GlobalModel.threeQuaterWidth, heigt: 60)
@@ -96,10 +99,13 @@ struct MovieInfo: View {
         }
         .frame(maxHeight: GlobalModel.halfScreenHeight + 20)
         .padding()
+        .fullScreenCover(isPresented: $isMovieDetail, content: {
+            MovieDetailPage(isDetail: $isMovieDetail, movieId: data.ID!)
+        })
     }
     
 }
 
 #Preview {
-    MovieInfo(isPresented: .constant(false), data: MockMovieList.movie1)
+    MovieInfo(isPresented: .constant(false), data: MockMovieList.movie1, erTicket: "Up to 8 members")
 }

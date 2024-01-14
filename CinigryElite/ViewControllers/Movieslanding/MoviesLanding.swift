@@ -25,11 +25,11 @@ struct MoviesLanding: View {
                     Button {
                         self.isShowingDetail = false
                     } label: {
-                        Text("Back")
+                        Text("Stop")
                     }
                 } else {
                     MoviesHeading(isShowingDetail: $isShowingDetail)
-                    MoviesGrid(moviesList: viewModel.movies)
+                    MoviesGrid(moviesList: viewModel.movies, erTicket: viewModel.erTicket)
                 }
             }
         }

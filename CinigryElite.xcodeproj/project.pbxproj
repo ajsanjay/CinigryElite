@@ -50,6 +50,11 @@
 		188C24092B54669700BD3F49 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C24082B54669700BD3F49 /* MovieDetail.swift */; };
 		188C240C2B546AAB00BD3F49 /* MovieInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C240B2B546AAB00BD3F49 /* MovieInfoViewModel.swift */; };
 		188C240E2B546BF000BD3F49 /* MovieDetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C240D2B546BF000BD3F49 /* MovieDetailPage.swift */; };
+		188C24102B54814F00BD3F49 /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C240F2B54814F00BD3F49 /* DateView.swift */; };
+		188C24122B54845700BD3F49 /* DateContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C24112B54845700BD3F49 /* DateContent.swift */; };
+		188C24142B5486A000BD3F49 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C24132B5486A000BD3F49 /* Date+Extension.swift */; };
+		188C24162B5494F300BD3F49 /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C24152B5494F300BD3F49 /* TimeView.swift */; };
+		188C24182B5498E800BD3F49 /* TimeContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C24172B5498E800BD3F49 /* TimeContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +102,11 @@
 		188C24082B54669700BD3F49 /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
 		188C240B2B546AAB00BD3F49 /* MovieInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoViewModel.swift; sourceTree = "<group>"; };
 		188C240D2B546BF000BD3F49 /* MovieDetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailPage.swift; sourceTree = "<group>"; };
+		188C240F2B54814F00BD3F49 /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
+		188C24112B54845700BD3F49 /* DateContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateContent.swift; sourceTree = "<group>"; };
+		188C24132B5486A000BD3F49 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		188C24152B5494F300BD3F49 /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
+		188C24172B5498E800BD3F49 /* TimeContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeContent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				1807E9932B52655C00F06827 /* CinigryEliteApp.swift */,
+				1807E9D02B52DEC200F06827 /* Utilities */,
 				1807E9D32B52DFA000F06827 /* Networking */,
 				1807E9AA2B5270BF00F06827 /* Models */,
 				188C24062B54662100BD3F49 /* ViewControllers */,
@@ -165,7 +176,6 @@
 			children = (
 				1807E9B72B5284D200F06827 /* AppGlobalModel.swift */,
 				1807E9AB2B5270CC00F06827 /* LandingModel.swift */,
-				1807E9D02B52DEC200F06827 /* Utilities */,
 				188C24072B54667900BD3F49 /* Movie */,
 				1807E9EF2B53D24C00F06827 /* GuestUser */,
 			);
@@ -177,6 +187,7 @@
 			children = (
 				1807E9B02B5278F900F06827 /* UIColor+Extension.swift */,
 				1807EA002B543D9100F06827 /* View+Extension.swift */,
+				188C24132B5486A000BD3F49 /* Date+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -308,6 +319,10 @@
 			children = (
 				188C240D2B546BF000BD3F49 /* MovieDetailPage.swift */,
 				1807EA0A2B5442AC00F06827 /* MovieDetailViewModel.swift */,
+				188C24112B54845700BD3F49 /* DateContent.swift */,
+				188C240F2B54814F00BD3F49 /* DateView.swift */,
+				188C24172B5498E800BD3F49 /* TimeContent.swift */,
+				188C24152B5494F300BD3F49 /* TimeView.swift */,
 			);
 			path = MovieDetail;
 			sourceTree = "<group>";
@@ -383,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1807E9CF2B52D76A00F06827 /* MovieGridCell.swift in Sources */,
+				188C24142B5486A000BD3F49 /* Date+Extension.swift in Sources */,
 				1807E9C72B52906F00F06827 /* MoviesHeading.swift in Sources */,
 				1807E9E42B53899500F06827 /* MoviesRequest.swift in Sources */,
 				1807E9DB2B52E16A00F06827 /* MultipartFormDataRequest.swift in Sources */,
@@ -399,6 +415,7 @@
 				1807E9A72B52708900F06827 /* LandingPoints.swift in Sources */,
 				1807E9942B52655C00F06827 /* CinigryEliteApp.swift in Sources */,
 				1807E9FD2B54377300F06827 /* MovieInfo.swift in Sources */,
+				188C24122B54845700BD3F49 /* DateContent.swift in Sources */,
 				1807E9D72B52E06900F06827 /* APIPath.swift in Sources */,
 				188C240C2B546AAB00BD3F49 /* MovieInfoViewModel.swift in Sources */,
 				1807E9F52B5400E200F06827 /* LoginModel.swift in Sources */,
@@ -408,10 +425,13 @@
 				188C24092B54669700BD3F49 /* MovieDetail.swift in Sources */,
 				1807E9A52B526F5500F06827 /* LandingTitle.swift in Sources */,
 				1807E9A22B526A2D00F06827 /* LandingPage.swift in Sources */,
+				188C24182B5498E800BD3F49 /* TimeContent.swift in Sources */,
 				1807E9AE2B52724B00F06827 /* LandingPoint.swift in Sources */,
 				1807E9C92B52983E00F06827 /* MoviesGrid.swift in Sources */,
 				1807E9E62B538A0600F06827 /* MoviesApi.swift in Sources */,
 				1807E9D92B52E13000F06827 /* APIHandler.swift in Sources */,
+				188C24162B5494F300BD3F49 /* TimeView.swift in Sources */,
+				188C24102B54814F00BD3F49 /* DateView.swift in Sources */,
 				1807E9BA2B5287C600F06827 /* LandingViewModel.swift in Sources */,
 				1807E9B82B5284D200F06827 /* AppGlobalModel.swift in Sources */,
 				1807E9E12B52E2CA00F06827 /* APILoader.swift in Sources */,

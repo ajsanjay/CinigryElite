@@ -11,6 +11,7 @@ struct MoviesGrid: View {
     
     @StateObject var viewModel = MoviesViewModel()
     var moviesList: [MovieContent]
+    var erTicket: String
     
     var body: some View {
         ZStack {
@@ -38,7 +39,7 @@ struct MoviesGrid: View {
             
             if viewModel.isShowingDetail {
                 withAnimation {
-                    BottomSheet(isShowing: $viewModel.isShowingDetail, content: AnyView(MovieInfo(isPresented: $viewModel.isShowingDetail, data: viewModel.selectedObject!)))
+                    BottomSheet(isShowing: $viewModel.isShowingDetail, content: AnyView(MovieInfo(isPresented: $viewModel.isShowingDetail, data: viewModel.selectedObject!, erTicket: erTicket)))
                 }
             }
         }
@@ -46,5 +47,5 @@ struct MoviesGrid: View {
 }
 
 #Preview {
-    MoviesGrid(moviesList: MockMovieList.movies)
+    MoviesGrid(moviesList: MockMovieList.movies, erTicket: "Up to 8 members")
 }

@@ -12,11 +12,11 @@ struct LandingTitle: View {
         VStack (alignment: .leading, spacing: -25) {
             Text("Join The Magic")
                 .padding()
-                .font(.largeTitle)
+                .font(.title)
                 .fontWeight(.medium)
             Text("Be Cinergy ELITE!")
                 .padding()
-                .font(.largeTitle)
+                .font(.title)
                 .fontWeight(.bold)
         }
     }

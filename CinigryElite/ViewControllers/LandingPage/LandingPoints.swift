@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LandingPoints: View {
     var body: some View {
-        VStack(spacing: 20) {
+        VStack(spacing: 10) {
             ForEach(LandingModel.landingPoints, id: \.self) {
                 pointVal in
                 LandingPoint(title: pointVal)

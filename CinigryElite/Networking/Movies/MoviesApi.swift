@@ -41,7 +41,22 @@ struct MoviesApi {
             if let _ = error {
                 completion(nil, error)
             } else {
-                completion(model, nil)
+                DispatchQueue.main.async {
+                    completion(model, nil)
+                }
+            }
+        }
+    }
+    
+    func MovieDetailAPI(param: [String: Any], completion: @escaping (MovieDetail?, ServiceError?) -> ()) {
+        let request = MoviesRequest().GetMoviesDetail(from: RequestData(requestParamType: .query, param: param))
+        APILoader.shared.loadAPIRequest(isUserId: true, requestData: request) { (model: MovieDetail?, error) in
+            if let _ = error {
+                completion(nil, error)
+            } else {
+                DispatchQueue.main.async {
+                    completion(model, nil)
+                }
             }
         }
     }
